@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="bootstrap-wrapper mt-5">
+        <div class="container  ">
+
+            <div class=" ">
+                    <div>
+                        <h1 class="center-text">WELCOME BACK</h1>
+                        <mat-form-field appearance="outline" class=" full-width">
+                            <mat-label>Username</mat-label>
+                            <input name="email" matInput type="email" placeholder="Please enter email"
+                                [(ngModel)]="formData.username" #inputData  [required]="true" required="true"/>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class=" full-width">
+                            <mat-label>Password</mat-label>
+                            <input name="password" matInput [type]="hide ? 'password' : 'text'" placeholder="Please enter password"
+                                [(ngModel)]="formData.password" [required]="true"  required="true" />
+                                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                                [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                                </button>
+                        </mat-form-field>
+                        <p class="mt-3 forgot-style" (click)="goToPage('forget')">Forgot Password?</p>
+                    </div>
+                <form (ngSubmit)="onSubmit(formData)">
+                    <button mat-raised-button color="primary" type="submit"
+                    class="mt-3 full-width">Login</button>
+                </form>
+                <button mat-raised-button color="warn" class="mt-3  full-width" (click)="goToPage('home')">Cancle</button>
+
+            </div>
+        </div>
+    </div>
+</div>

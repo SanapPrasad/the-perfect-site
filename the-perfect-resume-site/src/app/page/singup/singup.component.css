@@ -1,9 +1,32 @@
 .full-width{
     width: 100%;
 }
+.half-width{
+    width: 49.7%;
+}
+.width-10{
+    width: 10%;
+}
 .center-text{
     text-align: center
 }
 .cl{
     color:#FF6E40
+}
+
+.colors{
+    color:#007BFF;
+    color:#FFA500;
+    color:#4CAF50;
+    color:#333333;
+}
+
+.txt-center{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-size:20px;
+    font-weight: 700;
+    color: antiquewhite;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }

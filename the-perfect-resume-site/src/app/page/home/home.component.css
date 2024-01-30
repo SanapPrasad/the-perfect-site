@@ -1,0 +1,42 @@
+.txt-center {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.table thead tr td {
+    font-weight: 700;
+}
+
+.full-width {
+    width: 100%
+}
+
+.card {
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 16rem
+}
+
+.card button {
+    margin-bottom: 4px;
+}
+
+.card input {
+    margin-bottom: 4px;
+}
+
+.btn1 {
+    border: 1px solid;
+    cursor: text !important;
+}
+
+.img-hover:hover {
+
+    border: 2px solid green;
+}

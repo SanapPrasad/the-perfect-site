@@ -1,0 +1,33 @@
+<div class="container">
+    <h2 class="bg-primary mt-3 p-2 txt-center">Address Section</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>CITY</td>
+                <td>TOWN</td>
+                <td>DISTRICT</td>
+                <td>PIN</td>
+                <td>STATE</td>
+                <td>COUNTRY</td>
+                <td>ADDRESS TYPE</td>
+                <td>ACTION</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{address.city}}</td>
+                <td>{{address.town}}</td>
+                <td>{{address.district}}</td>
+                <td>{{address.pin}}</td>
+                <td>{{address.state}} </td>
+                <td>{{address.country}}</td>
+                <td>{{address.addressType}}</td>
+                <td>
+                    <button type="button" (click)="updateAddress(address)" class="btn btn-info">Update Address</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button mat-raised-button color="primary" class="mt-3">+ ADD ADDRESS</button>
+
+</div>

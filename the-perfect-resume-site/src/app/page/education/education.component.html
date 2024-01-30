@@ -1,0 +1,61 @@
+<h2 class="bg-primary mt-3 p-2 txt-center">Education Section</h2>
+<div class="container">
+
+    <table class="table" style="text-align:justify;">
+
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>COLLEGE</td>
+                <td>UNIVERSITY</td>
+                <td>STREAM</td>
+                <td>DURATION</td>
+                <td>MARK</td>
+                <td>EDUCATION TYPE</td>
+                <td colspan="2">ACTION</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let edu of educationList;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{edu.college}}</td>
+                <td>{{edu.university}}</td>
+                <td>{{edu.stream}}</td>
+                <td>{{edu.startMonth}} {{edu.startYear}} - {{edu.endMonth}} {{edu.endYear}}</td>
+                <td>{{edu.mark}}</td>
+                <td>{{edu.educationType}}</td>
+                <td>
+                    <button type="button" (click)="updateEducation(edu)" class="btn btn-info">Update</button>
+                </td>
+                <td>
+                    <button type="button" (click)="deleteEducation(edu)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Button trigger modal -->
+
+    <button mat-raised-button color="primary" class="mt-3"  data-toggle="modal" data-target="#exampleModal">+ ADD NEW EDUCATION</button>
+ 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

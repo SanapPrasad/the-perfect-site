@@ -1,55 +1,36 @@
-<div class="bootstrap-wrapper mt-5">
-    <div class="container ">
-        <div class="row col-md-6">
-            <form>
-                <div>
-                    <h1 class="center-text">Create Account</h1>
-                    <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>Email</mat-label>
-                        <input name="username" matInput type="email"
-                            placeholder="Please enter valid email address..." />
-                        <mat-hint>{{emailError}}</mat-hint>
-                    </mat-form-field>
-                    <mat-form-field appearance="outline" class="full-width-80">
-                        <mat-label>OTP</mat-label>
-                        <input name="varificationOTP" matInput placeholder="Please enter shared OTP on email..." />
-                    </mat-form-field>
-                    <i class="space-between"> </i>
-                    <!-- TODO: prevent null pointer by button disable function -->
-                    <button mat-raised-button color="primary" name="btnVerify">Send OTP</button>
-                    <button mat-raised-button color="primary" name="btnVerify">Verify</button>
-                    <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>Password</mat-label>
-                        <input name="password" matInput type="password" placeholder="Please enter strong password..." />
-                    </mat-form-field>
-                    <mat-form-field appearance="outline" class="full-width">
-                        <mat-label>Confirm Password</mat-label>
-                        <input name="confirmPassword" matInput type="password"
-                            placeholder="Please re-enter same password..." />
-                    </mat-form-field>
-                    <div class="center-text">
-                        <button mat-raised-button color="accent" type="submit" [disabled]="disable"
-                            class="full-width">Create</button>
-                    </div>
+<div class="container">
+    <h2 class="bg-primary mt-3 p-2 txt-center">Experience Section</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>TITLE</td>
+                <td>COMPANY NAME</td>
+                <td>LOCATION</td>
+                <td>DURATION</td>
+                <td>DESCRIPTION</td>
+                <td>EMPLOYMENT TYPE</td>
+                <td colspan="2">ACTION</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let exp of experienceList;let i=index">
+                <td>{{i+1}}</td>
+                <td>{{exp.title}}</td>
+                <td>{{exp.companyName}}</td>
+                <td>{{exp.location}}</td>
+                <td>{{exp.startMonth}} {{exp.startYear}} - {{exp.endMonth}} {{exp.endYear}}</td>
+                <td>{{exp.description}}</td>
+                <td>{{exp.employmentType}}</td>
+                <td>
+                    <button type="button" (click)="updateExperience(exp)" class="btn btn-info">Update</button>
+                </td>
+                <td>
+                    <button type="button" (click)="deleteExperience(exp)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button mat-raised-button color="primary" class="mt-3">+ ADD NEW EXPERIENCE</button>
 
-                </div>
-            </form>
-            <h3 class="mt-3">------------------------------------------------------ OR
-                ------------------------------------------------------- </h3>
-            <form>
-                <div>
-                    <button mat-raised-button color="primary" type="submit" class="full-width">Sign in</button>
-                    <br>
-                    <button mat-raised-button color="warn" class="mt-2 full-width">Cancle</button>
-                    <br>
-
-                    <button mat-raised-button color="accent" class="mt-2 full-width">Create</button>
-
-                </div>
-            </form>
-        </div>
-        <div class="row col-md-6">
-            <h1>Hii This is Prasad</h1>
-        </div>
-    </div>
 </div>

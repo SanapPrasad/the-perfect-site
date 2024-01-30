@@ -1,6 +1,13 @@
-.colors{
-   color: #D9138A;
-   background-color:#1E847F;
-   color:#E2D810; 
-   color:#ECC19C; 
+.container nav a{
+   padding-left:3%;
+   padding-right: 3%;
+}
+
+.container nav div{
+   padding-left:3%;
+   padding-right: 3%;
+}
+
+.nav-color{
+   background-color:rgb(231, 244, 145)
 }

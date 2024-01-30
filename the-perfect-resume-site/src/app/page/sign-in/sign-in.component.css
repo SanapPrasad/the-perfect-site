@@ -1,0 +1,12 @@
+.full-width{
+    width: 100%;
+}
+.center-text{
+    text-align: center
+}
+.forgot-style{
+    color: blue;
+}
+.forgot-style:hover{
+   cursor: pointer;
+}
